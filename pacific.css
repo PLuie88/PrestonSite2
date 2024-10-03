@@ -1,0 +1,170 @@
+header,
+hgroup,
+nav,
+footer,
+figure,
+figcaption,
+aside,
+section,
+article {
+	display: grid;
+}
+
+/*This is for the sizing of the text as well as setting the backgroud image to gradient
+additionally here I stop repeating the y axis and only the x from it duplicating itself. 
+Following this I set the margins to allow for the user to have a better experience.
+*/
+body {
+	background-image: url(ptrbackground.jpg);
+	background-repeat: repeat-x;
+	color: #666666;
+	font-family: Arial, Helvetica, sans-serif;
+	margin-bottom: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 25px;
+	margin-bottom: 200px;
+	
+
+}
+
+/*
+In this I used it to ensure that the max width and min width obliged by the assignments requirements being at 80% and 600px respectively,
+following this I set the margins to auto to make the content of the wrapper in the center. Addittionally I set the background color and 
+as I am working with a grid I set the grid template to what I need for this website.
+*/
+#wrapper {
+	display: grid;
+	gap: 0px;
+	max-width: 80%;
+	min-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	grid-template-areas: 
+	'header header'
+	'nav content'
+	'nav footer';
+	background-color: #00569f;
+	
+}
+/*
+In this case I am setting the image in the content view to be on the left side of the content, I then add the padding
+so that the bullet points from the list do not overlap with the image.
+*/
+#content img {
+	float: left;
+	padding-right: 40px;
+}
+/*
+Here I label the grid area for the content in order for it to be propperly aligned according to my grid layout also I added the padding to 
+the benefit of user expirience.
+*/
+#content {
+	grid-area: content;
+	background-color: white;
+	padding-left: 40px;
+}
+
+/*For the footer I set the background to white along with make the font size slightly smaller as well as making the font italic which
+I belive is how it appears in the assignment's screenshot I also add padding to the bottom as well as the left to make it close to the screenshot
+that is given in the assignment*/
+footer {
+	grid-area: footer;
+	background-color: white;
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: smaller;
+	font-style: italic;
+	padding-left: 40px;
+	padding-bottom: 10px;
+}
+
+/*The purpose of this is to set the bullet point marker to the given image*/
+ul {
+	list-style-image: url(marker.gif);
+}
+
+/*To ensure the width does not change I set a min width as well as setting the grid area so that is aligned as I want it to be according to
+my grid-template-areas.*/
+nav {
+	grid-area: nav;
+	min-width: 160px;
+	background-color: lightblue;
+}
+
+/*To ensure that the bullet points are inside of the pargraph like on the website I felt it would be best to positon them on the inside*/
+#content ul{
+	list-style-position: inside;
+}
+
+/*Much like the nac I set the width so that it would not change when the window size changed as well as getting ring of the styling to ensure that
+it was visually appealing to the user.*/
+nav ul {
+	min-width: 160px;
+	list-style: none;
+	font-size: 1.2em;
+	background-color: lightblue;
+}
+
+/*This sets the link color to black as well as getting rid of any decorations (like underline) that would not follow the assignments screenshot.*/
+nav a:link {
+	color: black;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+/*When a link is visted change the color to blue*/
+nav a:visited {
+	color: #344873;
+	text-decoration: none;
+}
+
+/*When a link is hoverd in the nav make it the text of it appear white as displayed by the assignemnt screenshots*/
+nav a:hover {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+/*Instructions for where the header should be for the grid-template-areas*/
+header {
+	display: grid;
+	grid-area: header;
+}
+
+/*Sets the background color of the header to the matching color of the background as the image does not encompass the entire length
+then set the image on the right and have it not repeat so that the image like on the assignment is oriented on the right side with the
+rest of the header being black, also here the text is set to white and the margins are augmented for visual appeal.*/
+h1 {
+	background-color: #000033;
+	background-image: url(sunset.jpg);
+	background-repeat: no-repeat;
+	background-position: right;
+	color: #FFFFFF;
+	padding-left: 40px;
+	margin-top: auto;
+	margin-bottom: auto;
+	padding-bottom: 12px;
+	padding-top: 12px;
+	background-size: auto;
+}
+
+/*Changes the color for any item with h2*/
+h2 {
+	color: #3399CC;
+}
+
+/*Changes the color as well as the weight of the text but only for items in resort*/
+.resort {
+	font-weight: bold;
+	color: #3399CC;
+}
+
+/*Font style for the headers*/
+h1,
+h2 {
+	font-family: Georgia, "Times New Roman", serif;
+}
+
+/*Text size for the contact information*/
+#contact {
+	font-size: 90%;
+}
